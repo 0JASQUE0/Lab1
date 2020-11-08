@@ -11,21 +11,35 @@ namespace UnitTest1
 	{
 	public:
 		
-		TEST_METHOD(push_back)
+		TEST_METHOD(push_back1)
 		{
 			LinkedList* lst = new LinkedList;
 			lst->push_back(0);
 			lst->push_back(1);
 			Assert::IsTrue(lst->at(0) == 0);
+		}
+
+		TEST_METHOD(push_back2)
+		{
+			LinkedList* lst = new LinkedList;
+			lst->push_back(0);
+			lst->push_back(1);
 			Assert::IsTrue(lst->at(1) == 1);
 		}
 
-		TEST_METHOD(push_front)
+		TEST_METHOD(push_front1)
 		{
 			LinkedList* lst = new LinkedList;
 			lst->push_front(4);
 			lst->push_front(5);
 			Assert::IsTrue(lst->at(0) == 5);
+		}
+
+		TEST_METHOD(push_front2)
+		{
+			LinkedList* lst = new LinkedList;
+			lst->push_front(4);
+			lst->push_front(5);
 			Assert::IsTrue(lst->at(1) == 4);
 		}
 
@@ -154,8 +168,6 @@ namespace UnitTest1
 			lst->push_back(1);
 			lst->push_back(2);
 			lst->push_back(3);
-			lst->push_front(4);
-			lst->push_front(5);
 			lst->reverse();
 			Assert::IsTrue(lst->at(0) == 3);
 		}
